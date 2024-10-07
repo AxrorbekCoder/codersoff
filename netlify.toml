@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"  # Команда для сборки приложения
+  publish = "build"          # Папка, в которой лежат скомпилированные файлы (React по умолчанию создает папку "build")
+
+[build.environment]
+  NODE_VERSION = "18.0.0"    # Версия Node.js, которую следует использовать (замените на нужную вам версию)
+
+[dev]
+  command = "npm start"      # Команда для локальной разработки
+  port = 3000                # Порт для разработки (React по умолчанию использует 3000)
+
+[[redirects]]
+  from = "/*"                # Все пути
+  to = "/index.html"         # Перенаправление на index.html для поддержки роутинга в single-page application
+  status = 200
